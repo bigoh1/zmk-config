@@ -42,7 +42,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        base_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -50,10 +50,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TILDE      &kp Q  &kp W                  &kp F              &kp P                  &kp G        &kp J    &kp L                   &kp U               &kp Y                   &kp SEMICOLON  &kp BSPC
-&kp BACKSPACE  &kp A  &HRM_L R LEFT_COMMAND  &HRM_L S LEFT_ALT  &HRM_L T LEFT_CONTROL  &kp D        &kp H    &HRM_R N RIGHT_CONTROL  &HRM_R E RIGHT_ALT  &HRM_R I RIGHT_COMMAND  &kp O          &kp SQT
-&kp LSHFT      &kp Z  &kp X                  &kp C              &kp V                  &kp B        &kp K    &kp M                   &kp COMMA           &kp DOT                 &kp FSLH       &kp TILDE
-                                             &kp LGUI           &lt 1 TAB              &kp SPACE    &kp RET  &lt 2 ESCAPE            &kp RALT
+&kp GRAVE      &kp Q                &kp W                  &kp F              &kp P                  &kp G                      &kp J    &kp L                   &kp U               &kp Y                   &kp SEMICOLON         &kp BSPC
+&kp BACKSPACE  &HRM_L LEFT_SHIFT A  &HRM_L LEFT_COMMAND R  &HRM_L LEFT_ALT S  &HRM_L LEFT_CONTROL T  &kp D                      &kp H    &HRM_R RIGHT_CONTROL N  &HRM_R RIGHT_ALT E  &HRM_R RIGHT_COMMAND I  &HRM_R RIGHT_SHIFT O  &kp SQT
+&kp LSHFT      &kp Z                &kp X                  &kp C              &kp V                  &kp B                      &kp K    &kp M                   &kp COMMA           &kp DOT                 &kp FSLH              &kp BACKSLASH
+                                                           &kp TILDE          &lt 1 TAB              &HRM_L LEFT_SHIFT SPACE    &kp RET  &lt 2 ESCAPE            &kp TILDE
             >;
         };
 
@@ -65,10 +65,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &trans
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
+&kp ASTERISK  &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS        &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans        &trans     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans          &kp LEFT        &kp DOWN         &kp UP                &kp RIGHT              &kp CARET         &kp DOLLAR
+&trans        &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0    &kp UNDERSCORE  &kp TILDE        &trans                &trans                 &trans            &trans
+                                       &trans        &trans        &kp SPACE       &kp RET         &trans           &trans
             >;
         };
 
@@ -80,11 +80,29 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&trans  &trans  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp DOLLAR       &kp PERCENT   &kp CARET             &trans                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &trans                   &trans  &trans  &trans  &trans  &trans  &trans
+                                 &trans        &trans                &trans                   &trans  &trans  &trans
             >;
+        };
+
+        system_layer {
+            bindings = <
+&trans      &trans  &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans  &bt BT_SEL 4  &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR  &trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 0    &trans  &trans  &trans  &trans  &trans  &trans
+                                  &trans        &trans        &trans          &trans  &trans  &trans
+            >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        conditional_system_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
