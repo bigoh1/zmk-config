@@ -5,9 +5,10 @@
 - [ ] check my CTRL+hjkl I use in insert mode with my new keymap+layers.
 - [ ] check NUMBER+jk for quick navigation.
 - [ ] Fix not being able to move across words with alt+arrows:
-  - Layer1 + Alt Homerow + arrow doesn't work. 
+  - Layer1 + Alt Homerow + arrow doesn't work.
   - only Alt Homerow + Layer 1 + arrow does.
 - [ ] figure out how to change langs
+- [ ] there are no letters х and ъ – mb configure languages on the firmware level
 
 # Inspo:
 
