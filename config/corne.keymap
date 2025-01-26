@@ -62,7 +62,7 @@
 
         tab-combo {
             bindings = <&kp TAB>;
-            key-positions = <31 33>;
+            key-positions = <33 32>;
             layers = <0>;
         };
 
@@ -77,6 +77,18 @@
             key-positions = <24 35>;
             layers = <3>;
         };
+
+        backspace-combo {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <9 8>;
+            layers = <0>;
+        };
+
+        caps-word-combo {
+            bindings = <&caps_word>;
+            key-positions = <2 9>;
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -90,10 +102,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&trans  &kp Q  &kp W                  &kp E                  &kp R              &kp T                                  &kp Y                   &kp U               &kp I                   &kp O                   &kp P          &kp LEFT_BRACKET
-&trans  &kp A  &HRM_L LEFT_COMMAND S  &HRM_L LEFT_CONTROL D  &HRM_L LEFT_ALT F  &kp G                                  &kp H                   &HRM_R RIGHT_ALT J  &HRM_R RIGHT_CONTROL K  &HRM_R RIGHT_COMMAND L  &kp SEMICOLON  &kp SQT
-&trans  &kp Z  &kp X                  &kp C                  &kp V              &kp B                                  &kp N                   &kp M               &kp COMMA               &kp DOT                 &kp FSLH       &kp RIGHT_BRACKET
-                                      &kp LEFT_SHIFT         &lt 1 TILDE        &HRM_L LA(LC(LG(LEFT_SHIFT))) SPACE    &HRM_R TILDE BACKSPACE  &lt 2 TILDE         &kp ENTER
+&trans  &kp Q  &kp W                  &kp E                  &kp R              &kp T                 &kp Y           &kp U               &kp I                   &kp O                   &kp P          &kp LEFT_BRACKET
+&trans  &kp A  &HRM_L LEFT_COMMAND S  &HRM_L LEFT_CONTROL D  &HRM_L LEFT_ALT F  &kp G                 &kp H           &HRM_R RIGHT_ALT J  &HRM_R RIGHT_CONTROL K  &HRM_R RIGHT_COMMAND L  &kp SEMICOLON  &kp SQT
+&trans  &kp Z  &kp X                  &kp C                  &kp V              &kp B                 &kp N           &kp M               &kp COMMA               &kp DOT                 &kp FSLH       &kp RIGHT_BRACKET
+                                      &trans                 &lt 1 TILDE        &HRM_L TILDE SPACE    &kp LEFT_SHIFT  &lt 2 TILDE         &trans
             >;
         };
 
@@ -105,10 +117,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &trans    &trans         &trans       &trans     &trans  &trans
-&trans  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &trans          &trans    &kp PAGE_DOWN  &kp PAGE_UP  &trans     &trans  &trans
-                                    &trans        &trans        &trans          &trans    &trans         &trans
+&trans  &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &mt F4 NUMBER_4  &mt F5 NUMBER_5    &trans    &trans         &trans       &trans     &trans  &trans
+&trans  &mt F6 NUMBER_6  &mt F7 NUMBER_7  &mt F8 NUMBER_8  &mt F9 NUMBER_9  &mt F10 TILDE      &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &trans  &trans
+&trans  &mt F11 TILDE    &mt F12 TILDE    &trans           &trans           &trans             &trans    &kp PAGE_DOWN  &kp PAGE_UP  &trans     &trans  &trans
+                                          &trans           &trans           &trans             &trans    &trans         &trans
             >;
         };
 
