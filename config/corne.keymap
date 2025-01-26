@@ -51,16 +51,19 @@
         escape-combo {
             bindings = <&kp ESCAPE>;
             key-positions = <1 2>;
+            layers = <0>;
         };
 
         enter-combo {
             bindings = <&kp ENTER>;
             key-positions = <31 32>;
+            layers = <0>;
         };
 
         tab-combo {
             bindings = <&kp TAB>;
             key-positions = <31 33>;
+            layers = <0>;
         };
 
         soft-off-combo {
