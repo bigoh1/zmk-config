@@ -56,7 +56,7 @@
 
         escape-combo {
             bindings = <&kp ESCAPE>;
-            key-positions = <1 2>;
+            key-positions = <19 20>;
             layers = <0>;
         };
 
