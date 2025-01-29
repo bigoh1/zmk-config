@@ -66,7 +66,7 @@
             bindings = <&kp ENTER>;
             key-positions = <31 32>;
             layers = <0>;
-            timeout-ms = <7>;
+            timeout-ms = <18>;
             require-prior-idle-ms = <30>;
         };
 
@@ -74,7 +74,7 @@
             bindings = <&kp TAB>;
             key-positions = <33 32>;
             layers = <0>;
-            timeout-ms = <7>;
+            timeout-ms = <18>;
             require-prior-idle-ms = <30>;
         };
 
@@ -94,7 +94,7 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <9 8>;
             layers = <0>;
-            timeout-ms = <7>;
+            timeout-ms = <18>;
             require-prior-idle-ms = <30>;
         };
 
