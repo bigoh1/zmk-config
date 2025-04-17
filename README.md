@@ -16,3 +16,4 @@
   - it has some combos and leader+keys for unicode chars.
   - [ ] from here, take the `.conf` files as well.
 - [keymapdb](https://keymapdb.com/?firmwares=ZMK&keyboard=Corne)
+
